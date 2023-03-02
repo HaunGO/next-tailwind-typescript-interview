@@ -1,0 +1,20 @@
+body{
+    @apply bg-orange-100 border-dashed p-4;
+}
+ 
+#brandon{
+    @apply border-l-4 border-b-4 border-t border-r;
+    @apply fixed bottom-0 left-0 w-full h-full border-gray-100;
+    @apply flex flex-col justify-end items-start;
+    @apply font-serif pointer-events-none;
+}
+
+#bh-name{
+    @apply text-5xl font-extrabold leading-none;
+    @apply table bg-gray-100 px-2 pt-1 pr-3 m-0 rounded-tr-xl;
+}
+
+#bh-tag{
+    @apply text-2xl font-semibold; 
+    @apply inline-block bg-gray-100 px-2 pt-1 pr-3 py-0 m-0 rounded-tr-xl;
+}  

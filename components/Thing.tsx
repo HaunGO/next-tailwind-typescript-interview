@@ -1,53 +1,40 @@
-// {/* @ts-expect-error Server Component */}
-
-// async function getData() {
-//   const res = await fetch('https://api.kucoin.com/api/v1/market/allTickers');
-//   if (!res.ok) {
-//     throw new Error('Failed to fetch data');
-//   }
-//   console.log(res);
-//   return res.json();
-// }
-
-// export default function Thing() {
-//   const data = getData();
-//   return (
-//     <>
-//       <code>Thing</code>
-//       <div>
-//         {/* {data} */}
-//       </div>
-//     </>
-//   );
-// }
-
-
-
-
-  
-
-
-
 import React, { useState, useEffect } from 'react';
+import MicroThing from '../components/MicroThing';
+
 
 function Thing() {
-  const [allTickers, setAllTickers] = useState(null);
-
+  // const [allTickers, setAllTickers] = useState(null);
+  const [allSomething, setAllSomething] = useState(null);
+  
   useEffect(() => {
+
     const fetchData = async () => {
-      // const response = await fetch('https://api.kucoin.com/api/v1/market/allTickers');
-      const response = await fetch('allTickers.json');
+      // https://jsonplaceholder.typicode.com/photos
+      const response = await fetch('https://jsonplaceholder.typicode.com/photos/');
+      // const response = await fetch('https://jsonplaceholder.typicode.com/todos/');
       const data = await response.json();
-      setAllTickers(data);
+      // I just want 10, so I'll going to slice them off 
+      const lessData = data.slice(0, 10);
+      setAllSomething(lessData);
     };
 
     fetchData();
+
   }, []);
   
   return (
     <div>
-      {allTickers ? (
-        <pre>{JSON.stringify(allTickers, null, 2)}</pre>
+
+      {allSomething ? (
+        <div>
+          {/* <small><code><pre>{JSON.stringify(allSomething, null, 2)}</pre></code></small> */}
+
+          {allSomething.map((thing) => (
+            <MicroThing key={thing.id} id={thing.id} title={thing.title} url={thing.url} thumb={thing.thumbnailUrl} />
+          ))}
+
+        </div>
+        
       ) : (
         <p>Loading...</p>
       )}
