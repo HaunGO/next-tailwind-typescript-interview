@@ -16,8 +16,6 @@ const interFont = Inter({
   variable: "--font-inter",
   display: "swap",
 });
- 
-
 
 export default function App({ Component, pageProps }: AppProps) {
   
