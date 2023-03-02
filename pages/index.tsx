@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Form1 from "../components/Form1"
 import Brandon from "../components/Brandon"
-import Thing from "../components/Thing"
+// import Thing from "../components/Thing"
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <main>
         <Form1 />
-        <Thing />
+        {/* <Thing /> */}
         <Brandon />
       </main>
     </>

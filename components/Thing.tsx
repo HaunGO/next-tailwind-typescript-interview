@@ -3,7 +3,6 @@ import MicroThing from '../components/MicroThing';
 
 
 function Thing() {
-  // const [allTickers, setAllTickers] = useState(null);
   const [allSomething, setAllSomething] = useState(null);
   
   useEffect(() => {

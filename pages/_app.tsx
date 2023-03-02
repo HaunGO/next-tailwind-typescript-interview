@@ -5,11 +5,10 @@ import { Inter } from "@next/font/google"
 
 import Layout from '../components/layout'
 
-import TagManager from 'react-gtm-module'
-
-const tagManagerArgs = {
-  gtmId: 'G-EXS0MQ7FQY'
-}
+// import TagManager from 'react-gtm-module'
+// const tagManagerArgs = {
+//   gtmId: 'G-EXS0MQ7FQY'
+// }
 
 const interFont = Inter({
   subsets: ["latin"],
@@ -19,9 +18,9 @@ const interFont = Inter({
 
 export default function App({ Component, pageProps }: AppProps) {
   
-  useEffect(() => {
-    TagManager.initialize(tagManagerArgs)
-  }, [])
+  // useEffect(() => {
+  //   TagManager.initialize(tagManagerArgs)
+  // }, [])
 
   return (
     <div className={`${interFont.variable} font-sans`}>
