@@ -19,6 +19,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Thing.jsx", "components/MicroThing.jsx", "components/Row.jsx", "components/Form1.jsx", "pages/index.jsx", "pages/_document.jsx", "pages/_app.jsx", "components/Brandon.jsx", "components/layout.jsx"],
   "exclude": ["node_modules"]
 }

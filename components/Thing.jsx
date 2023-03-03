@@ -28,8 +28,10 @@ function Thing() {
         <div>
           {/* <small><code><pre>{JSON.stringify(allSomething, null, 2)}</pre></code></small> */}
 
-          {allSomething.map((thing):any => (
-            <MicroThing key={thing.id} id={thing.id} title={thing.title} url={thing.url} thumb={thing.thumbnailUrl} />
+          {allSomething.map((thing) => (
+              // <p key={thing.id}>{thing.title}</p>
+              // <MicroThing key={thing.id} props={thing} />
+              <MicroThing key={thing.id} id={thing.id} title={thing.title} url={thing.url} thumb={thing.thumbnailUrl} />
           ))}
 
         </div>

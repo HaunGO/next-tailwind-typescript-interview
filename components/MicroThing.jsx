@@ -3,16 +3,19 @@ import Image from 'next/image';
 
 const MicroThing = (props) => {
     return (
-        <div>
-           <p>{props.title}</p>
+        <>
+        <div className="flex flex-row items-center">
            <Image
                 src={props.thumb}
                 alt={props.title}
                 width={50}
                 height={50}
+                className="mr-2"
                 />
+            <p>{props.title}</p>
         </div>
+        </>
     );
 };
 
-export default MicroThing;
+export default MicroThing; 
