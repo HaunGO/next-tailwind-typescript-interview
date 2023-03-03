@@ -4,7 +4,7 @@
 export default function Layout({children}){
     return (
         <>
-            <code>layout</code>
+            {/* <code>layout</code> */}
             <main>{children}</main>
         </>
     )

@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={`${interFont.variable} font-sans`}>
       <Layout>
-        <code>_app</code>
+        {/* <code>_app</code> */}
         <Component {...pageProps} />
       </Layout>
     </div>

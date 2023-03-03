@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "ssn": "1234567890",
+        "name": "Jerome Belldsaf  E$%a sg dag5gdfga5 54  5g5g5w45t5 g5 g 54",
+        "nickname": "Rome",
+        "covered": true,
+        "subscriber": true,
+        "insurance": "Primary"
+    },
+    {
+        "id": 2,
+        "ssn": "585656121",
+        "name": "Stacy Bell",
+        "nickname": "Stacy",
+        "covered": true,
+        "subscriber": false,
+        "insurance": "Primary"
+    },
+    {
+        "id": 3,
+        "ssn": "36582154878",
+        "name": "Rebecca Bell",
+        "nickname": "Becca",
+        "covered": false,
+        "subscriber": false,
+        "insurance": "Secondary"
+    },
+    {
+        "id": 4,
+        "ssn": "9988556632",
+        "name": "Dinner Bell",
+        "nickname": "Pavlov",
+        "covered": false,
+        "subscriber": false,
+        "insurance": "Secondary"
+    }
+]
