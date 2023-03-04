@@ -4,3 +4,15 @@
 
 @import 'brandon.css';
  
+#form1 {
+    @apply text-left w-full;
+}
+
+#form1 thead{
+    @apply text-xs;
+}
+ 
+#form1 th{ 
+    @apply font-normal ;
+}
+  
