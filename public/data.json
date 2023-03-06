@@ -1,38 +1,34 @@
 [
     {
-        "id": 1,
         "ssn": "1234567890",
         "name": "Jerome Belldsaf",
         "nickname": "Rome",
+        "insurance": "Primary",
         "covered": true,
-        "subscriber": true,
-        "insurance": "Primary"
+        "subscriber": true
     },
     {
-        "id": 2,
         "ssn": "585656121",
         "name": "Stacy Bell",
         "nickname": "Stacy",
+        "insurance": "Primary",
         "covered": true,
-        "subscriber": false,
-        "insurance": "Primary"
+        "subscriber": false
     },
     {
-        "id": 3,
         "ssn": "36582154878",
         "name": "Rebecca Bell",
         "nickname": "Becca",
+        "insurance": "Secondary",
         "covered": false,
-        "subscriber": false,
-        "insurance": "Secondary"
+        "subscriber": false
     },
     {
-        "id": 4,
         "ssn": "9988556632",
         "name": "Dinner Bell",
         "nickname": "Pavlov",
+        "insurance": "Secondary",
         "covered": false,
-        "subscriber": false,
-        "insurance": "Secondary"
+        "subscriber": false
     }
 ]
