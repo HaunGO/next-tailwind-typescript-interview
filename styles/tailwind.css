@@ -4,15 +4,19 @@
 
 @import 'brandon.css';
  
-#form1 {
-    @apply text-left w-full;
+#form1 table {
+    display: grid;
+    grid-template-columns: 
+    minmax(25px, 0.45fr)
+    minmax(150px, 2fr)
+    minmax(25px, 0.55fr)
+    minmax(100px, 1fr) 
+    minmax(100px, 1fr);  
+    row-gap: 10px;  
 }
 
-#form1 thead{
-    @apply text-xs;
+#form1 thead,
+#form1 tbody,
+#form1 tr {
+  display: contents;
 }
- 
-#form1 th{ 
-    @apply font-normal ;
-}
-  

@@ -1,14 +1,14 @@
 [
     {
         "ssn": "1234567890",
-        "name": "Jerome Belldsaf",
+        "name": "Jerome Bell",
         "nickname": "Rome",
         "insurance": "Primary",
         "covered": true,
         "subscriber": true
     },
     {
-        "ssn": "585656121",
+        "ssn": "",
         "name": "Stacy Bell",
         "nickname": "Stacy",
         "insurance": "Primary",
@@ -16,15 +16,15 @@
         "subscriber": false
     },
     {
-        "ssn": "36582154878",
+        "ssn": "",
         "name": "Rebecca Bell",
         "nickname": "Becca",
         "insurance": "Secondary",
         "covered": false,
-        "subscriber": false
+        "subscriber": true
     },
     {
-        "ssn": "9988556632",
+        "ssn": "",
         "name": "Dinner Bell",
         "nickname": "Pavlov",
         "insurance": "Secondary",
