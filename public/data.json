@@ -1,34 +1,34 @@
 [
     {
-        "ssn": "1234567890",
+        "covered": true,
         "name": "Jerome Bell",
         "nickname": "Rome",
+        "subscriber": true,
         "insurance": "Primary",
-        "covered": true,
-        "subscriber": true
+        "ssn": "1234567890"
     },
     {
-        "ssn": "",
+        "covered": true,
         "name": "Stacy Bell",
         "nickname": "Stacy",
+        "subscriber": false,
         "insurance": "Primary",
-        "covered": true,
-        "subscriber": false
+        "ssn": ""
     },
     {
-        "ssn": "",
+        "covered": false,
         "name": "Rebecca Bell",
         "nickname": "Becca",
+        "subscriber": true,
         "insurance": "Secondary",
-        "covered": false,
-        "subscriber": true
+        "ssn": ""
     },
     {
-        "ssn": "",
+        "covered": false,
         "name": "Dinner Bell",
         "nickname": "Pavlov",
+        "subscriber": false,
         "insurance": "Secondary",
-        "covered": false,
-        "subscriber": false
+        "ssn": ""
     }
 ]

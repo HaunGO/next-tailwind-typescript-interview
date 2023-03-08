@@ -1,14 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-
 const Row = (props) => {
-  
-
-  
-  
-  
-  
-  
   
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   const [covered, setCovered] = useState(props.covered); 
@@ -18,28 +10,33 @@ const Row = (props) => {
   const [insID, setInsID] = useState(props.ssn); 
   const [insurance, setInsurance] = useState(props.insurance); 
 
-  const onNameChange = (e) => {
-    setName(e.target.value);
-  }
-  const onNicknameChange = (e) => {
-    setNickname(e.target.value);
-  }
+  // const onNameChange = (e) => {
+  //   setName(e.target.value);
+  // }
+  // const onNicknameChange = (e) => {
+  //   setNickname(e.target.value);
+  // }
+  // const onInsChange = (e) => {
+  //   setInsurance(e.target.value);
+  // }
+  // const onInsIDChange = (e) => {
+  //   setInsID(e.target.value);
+  // }
   const onCoveredChange = (e)=>{
-    setCovered(!covered);
+    // setCovered(!covered);
+    setCovered(covered =>{
+      return !covered
+    })
   }
   const onSubscribeChange = (e)=>{
-    setSubscribed(!subscribed);
-  }
-  const onInsChange = (e) => {
-    setInsurance(e.target.value);
-  }
-  const onInsIDChange = (e) => {
-    setInsID(e.target.value);
+    // setSubscribed(!subscribed);
+    setSubscribed(subscribed =>{
+      return !subscribed
+    }) 
   }
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-
+  
 
 
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,21 +45,17 @@ const Row = (props) => {
   const updateRows = props.updateRows;
 
   useEffect(() => {
-    // console.log('hi from Row');
     updateRows({thisIndex:props.index, rowData:{
+      "covered": covered,
       "name": name,
       "nickname": nickname, 
-      "covered": covered,
-      "insurance": insurance,
       "subscriber": subscribed,
+      "insurance": insurance,
       "ssn": insID
     }});
 
   },[covered, subscribed, name, nickname, insID, insurance])
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
 
 
 
@@ -101,12 +94,16 @@ const Row = (props) => {
 
           <td className="flex justify-center items-center">
             <input 
-              className="text-teal-500 rounded-sm
-                focus:outline focus:outline-offset-2
-              focus:outline-teal-500" 
+              className="
+                      text-teal-500 rounded-sm
+                        focus:outline focus:outline-offset-2
+                      focus:outline-teal-500" 
               type="checkbox" 
               checked={covered} 
-              onChange={onCoveredChange}/>
+              onChange={onCoveredChange}
+              // onChange={e => setCovered(!covered)}
+              // onChange={setCovered(covered =>{ return !covered })}
+              />
           </td>
 
           <td className="flex flex-row justify-start items-center flex-grow-0">
@@ -114,85 +111,90 @@ const Row = (props) => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
             <input 
-              className="px-0 border-0" 
+              className="
+                        px-0 border-0
+                      placeholder:text-slate-300" 
               type="text" 
               size={nameSize}  
               defaultValue={name} 
               placeholder="Full Name"
-              onChange={onNameChange} 
+              // onChange={onNameChange} 
+              onChange={e => setName(e.target.value)}
               ref={nameField}
               />
             <span className="text-slate-400">(</span>
             <input 
               className="pl-0 pr-0 border-0 
-                      text-slate-400 
-                      placeholder:text-slate-400
-                      text-sm" 
+                        text-slate-400 
+                        placeholder:text-slate-300
+                          text-sm" 
               type="text" 
               size={nicknameSize}  
               defaultValue={nickname} 
               placeholder="Nickname"
-              onChange={onNicknameChange} 
+              // onChange={onNicknameChange} 
               ref={nicknameField}
+              onChange={e => setNickname(e.target.value)}
               />
             <span className="text-slate-400">)</span>
           </td>
           
-
           <td className="flex justify-center items-center">
             <input 
-              className="
-              bg-white 
-              border-0
-              outline outline-1 outline-offset-2 outline-slate-200
-              text-teal-500 
-              shadow-teal-500 
-              checked:outline-teal-500 
-              checked:text-teal-500 
-              focus:outline-teal-500
-              disabled:checked:outline-teal-100
-              disabled:checked:text-teal-100"
+              className="bg-white 
+                        border-0
+                        outline outline-1 outline-offset-2 outline-slate-400
+                        text-teal-500 
+                        shadow-teal-500 
+                        checked:outline-teal-500 
+                        checked:text-teal-500 
+                        focus:outline-teal-500
+                        disabled:checked:outline-teal-100
+                        disabled:checked:text-teal-100"
               type="radio" 
               disabled={!covered} 
               checked={subscribed} 
               readOnly 
-              onClick={onSubscribeChange}  />
+              onClick={onSubscribeChange}  
+              // onChange={e => setSubscribed(!subscribed)}
+              />
           </td>
 
-
           <td className="flex justify-center items-center" >
+            <label htmlFor="Insurance"></label>
             <select 
+              name="Insurance"
               className="rounded border-slate-200
-              disabled:bg-slate-50 
-              disabled:text-slate-300/0" 
+                        disabled:bg-slate-50 
+                          disabled:text-slate-300/0" 
               defaultValue={insurance} 
               disabled={!covered} 
-              onChange={onInsChange}>
+              // onChange={onInsChange}
+              onChange={e => setInsurance(e.target.value)}
+              >
+                <option value="" disabled></option>
                 <option value="Primary">Primary</option>
                 <option value="Secondary">Secondary</option>
             </select>
           </td>
 
-          
           <td className="flex justify-center items-center" >
             <input 
               className="rounded border-slate-200 
-              text-slate-500 
-              placeholder:text-slate-300 
-              disabled:bg-slate-50 
-              disabled:text-slate-300/0
-              disabled:placeholder:text-slate-300/0"
+                        text-slate-500 
+                        placeholder:text-slate-300 
+                        disabled:bg-slate-50 
+                        disabled:text-slate-300/0
+                        disabled:placeholder:text-slate-300/0"
               type="text" 
               placeholder="Ins. ID/SSN" 
               disabled={!covered} size="10" 
-              onChange={onInsIDChange} />
+              // onChange={onInsIDChange} 
+              onChange={e => setInsID(e.target.value)}
+              />
           </td>
 
-
         </tr>
-
-
-
 
 
        </>
