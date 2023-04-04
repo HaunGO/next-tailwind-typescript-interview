@@ -1,0 +1,31 @@
+/* styles/NavBar.module.css */
+.topNav {
+    /* height: 56px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+    /* box-shadow: 0 5px 10px #ccc; */
+  }
+
+/* Basic styles for nav links */
+.topNav a {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100%;
+    text-decoration: none;
+}
+
+/* Specific styles for non-active links */
+.nonActive {
+    color: white;
+}
+
+/* Specific styles for active links */
+.isActive {
+    color: black;
+    background: gold;
+}
+  

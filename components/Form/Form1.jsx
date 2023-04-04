@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Row from '../components/Row';
-// import RowTest from '../components/RowTest';
-// import CreateRow from '../components/CreateRow';
+import Row from './Row';
 
 export default function Form1() {
 

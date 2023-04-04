@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'brandon.css';
- 
+/* @import 'brandon.css'; */
+/*  
 #form1 table {
     display: grid;
     grid-template-columns: 
@@ -19,4 +19,4 @@
 #form1 tbody,
 #form1 tr {
   display: contents;
-}
+} */

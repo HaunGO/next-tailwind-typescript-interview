@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import MicroThing from '../components/MicroThing';
+import MicroThing from './MicroThing';
 
 
 function Thing() {

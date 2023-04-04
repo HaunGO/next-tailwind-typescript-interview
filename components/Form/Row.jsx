@@ -103,6 +103,7 @@ const Row = (props) => {
               onChange={onCoveredChange}
               // onChange={e => setCovered(!covered)}
               // onChange={setCovered(covered =>{ return !covered })}
+
               />
           </td>
 
